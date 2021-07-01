@@ -1,0 +1,184 @@
+/* Estilo principal
+    viewport width vw
+    viewport height vh
+*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+}
+/*Estilos del header*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+header div.primerBloque{
+    background:  #D1891C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    line-height: 56px;    
+    color: #333333;
+    height: 61px;
+    padding-left: 20px;
+}
+
+header div.segundoBloque{
+    background: #00669F;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    line-height: 84px;    
+    color: #FFFFFF;
+    height: 162px;
+    padding-left: 20px;
+}
+
+/*Estilos del main*/
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1000x;
+    height: 1000px;
+
+}
+
+main section.heroes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+main section.heroes select.cuadros{
+    display: flex;
+}
+
+main section.heroes section div.batman, div.superman, div.wonder, div.harley {
+    display: flex;    
+    background: #C4C4C4;
+    /*border-radius: 50px;    */
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    background-image: url("../img/fondo1.png");
+    background-repeat: no-repeat;
+    background-size: 300px 195px;
+    width: 300px;
+    height: 195px;
+
+}
+
+
+main section.heroes section div.batmanText, div.supermanText, div.wonderText, div.harleyText {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    background: #F3F3F3;
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+    top: -154px;
+}
+
+main section.heroes section div p.titulo {
+    display:flex;
+    align-items: center;    
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+main section.heroes section div p.texto {
+    display:flex;
+    align-items: center;    
+    font-size: 15px;
+    line-height: 21px;
+
+    color: #333333;
+}
+
+main section.heroes section div button {
+    display:flex;
+    align-items: center;
+    width: 80px;
+    height: 42px;
+    background: #00669F;
+    border-radius: 7px;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: justify;
+    color: #F3F3F3;
+}
+
+main section.heroes section img {
+    position:relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: -70px;
+    left: 80px;
+}
+
+.heart {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: red;
+}
+
+main section.batman, section.wonder, section.superman, section.harley {
+
+} 
+
+
+
+/*Estilos del footer*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    height: 162px;
+    background: #00669F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+@media (min-width: 460px) {
+    /* Tablets */
+
+}
+
+@media (min-width: 768px){
+    /* Laptops */
+
+}
