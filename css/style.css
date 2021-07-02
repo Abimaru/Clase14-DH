@@ -12,8 +12,6 @@ body{
     margin: 0;
 }
 
-html {
-}
 /*Estilos del header*/
 
 header {
@@ -25,26 +23,25 @@ header {
 }
 
 header div.primerBloque{
-    background:  #D1891C;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 56px;    
     color: #333333;
+    background:  #D1891C;
     height: 61px;
     padding-left: 20px;
 }
 
 header div.segundoBloque{
-    background: #00669F;
     box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
-    line-height: 84px;    
+    font-size: 20px;
+    line-height: 26px;    
     color: #FFFFFF;
+    background: #00669F;
     height: 162px;
     padding-left: 20px;
 }
@@ -55,9 +52,8 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 1000x;
-    height: 1000px;
-
+    justify-content: space-evenly;
+    padding-top: 50px;
 }
 
 main section.heroes {
@@ -71,6 +67,10 @@ main section.heroes {
 }
 
 main section.heroes select.cuadros{
+    display: flex;
+}
+
+main section.heroes select.harleyC{
     display: flex;
 }
 
@@ -88,6 +88,20 @@ main section.heroes section div.batman, div.superman, div.wonder, div.harley {
 
 }
 
+main section.heroes div.superman {
+    background-image: url("../img/fondo3.png");
+    background-repeat: no-repeat;
+}
+
+main section.heroes div.wonder {
+    background-image: url("../img/fondo4.png");
+    background-repeat: no-repeat;
+}
+
+main section.heroes div.harley {
+    background-image: url("../img/fondo2.png");
+    background-repeat: no-repeat;
+}
 
 main section.heroes section div.batmanText, div.supermanText, div.wonderText, div.harleyText {
     display:flex;
@@ -98,9 +112,10 @@ main section.heroes section div.batmanText, div.supermanText, div.wonderText, di
     background: #F3F3F3;
     z-index: 1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 20px;
+    padding: 10px;
+    padding-top: 70px;
     width: 300px;
-    height: 400px;
+    height: 450px;
     top: -154px;
 }
 
@@ -110,7 +125,6 @@ main section.heroes section div p.titulo {
     font-size: 25px;
     line-height: 30px;
     text-align: center;
-
     color: #000000;
 
 }
@@ -120,7 +134,7 @@ main section.heroes section div p.texto {
     align-items: center;    
     font-size: 15px;
     line-height: 21px;
-
+    text-align: justify;
     color: #333333;
 }
 
@@ -144,8 +158,13 @@ main section.heroes section img {
     border-radius: 50%;
     z-index: 2;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: calc(50% - (75px / 2));
     top: -70px;
-    left: 80px;
+    left: calc(50% - (150px / 2));
+}
+
+main section.heroes section img.super {
+    position:relative;
 }
 
 .heart {
@@ -157,28 +176,77 @@ main section.heroes section img {
     color: red;
 }
 
-main section.batman, section.wonder, section.superman, section.harley {
-
-} 
-
-
-
 /*Estilos del footer*/
 footer{
     display: flex;
     justify-content: space-between;
+    align-content: center;
+    align-items: center;
     height: 162px;
     background: #00669F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 30px;
+    color: #FFF9F9;
+
+}
+
+footer p {
+    flex-grow: 0.75;
+    text-align: right;
+}
+
+footer img {
+    width: 200px;
+    height: 50px;
 }
 
 
-@media (min-width: 460px) {
+@media (max-width: 1250px) {
     /* Tablets */
+    
 
 }
 
-@media (min-width: 768px){
-    /* Laptops */
+@media (max-width: 730px){
+    /* Celulares */
+    main section.heroes {
+        width: 90%;
+        flex-direction: column;
+    }
 
+    main section.heroes section.harleyC {
+        display: none;
+    }
+
+    main section.heroes section.cuadros {
+        width: 90%;
+    }
+
+    main section.heroes section.cuadros div {
+        width: 90%;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    main section.heroes section img {
+        top: -70px;
+        left: calc(45% - (150px / 2));
+    }
+
+    main section.heroes section img.super{
+        content:url("../img/superman2.png");
+    }
+
+    footer {
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+
+    footer p {
+        flex-grow: 0;
+        text-align: center;
+    }
 }
